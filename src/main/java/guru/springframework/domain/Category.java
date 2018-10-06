@@ -2,10 +2,12 @@ package guru.springframework.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@ToString
 @Getter
 @Setter
 @Entity
