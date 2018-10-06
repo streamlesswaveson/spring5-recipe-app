@@ -15,7 +15,8 @@ public class Ingredient {
     private String description;
     private Integer amount;
 
-//    private UnitOfMeasure unitOfMeasure
+    @OneToOne
+    private UnitOfMeasure unitOfMeasure;
 
     @ManyToOne
     private Recipe recipe;
