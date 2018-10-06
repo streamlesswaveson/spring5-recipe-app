@@ -32,4 +32,7 @@ public class Recipe {
     // 'recipe' in mappedBy is the target property in the ingredient class
     @OneToMany(cascade = CascadeType.ALL,  mappedBy = "recipe")
     private Set<Ingredient> ingredients;
+
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
 }
