@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Setter
 @Getter
@@ -27,4 +28,8 @@ public class Recipe {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
+
+    // 'recipe' in mappedBy is the target property in the ingredient class
+    @OneToMany(cascade = CascadeType.ALL,  mappedBy = "recipe")
+    private Set<Ingredient> ingredients;
 }
